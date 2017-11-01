@@ -4,7 +4,6 @@
 //Task: #Assignment1
 //Matrik: #240403
 //Name: #Tee Li Hong
-
 package com.tlh.rt_assignment1;
 
 import static com.tlh.rt_assignment1.countfni.CountMain.PATH;
@@ -20,11 +19,10 @@ public class TestFileIssue {
     public void testCountFile() {
 
         ArrayList<String> existingFile = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
-        FileIssue fileL = new FileIssue(existingFile,PATH);
-        fileL.countIssue(PATH, existingFile);
+        FileIssue.countIssue(PATH, existingFile);
 
         int expectedFile = 4;
-        int actualFile = fileL.getCountFile();
+        int actualFile = FileIssue.getCountFile();
 
         Assert.assertEquals(expectedFile, actualFile);
 
@@ -34,12 +32,11 @@ public class TestFileIssue {
     public void testCountIssue() {
 
         ArrayList<String> existingFile = new ArrayList(Arrays.asList("MySleep.java", "MyThread.java", "TestWaitNotify.java", "ThreadBlocked.java"));
-        FileIssue fileL = new FileIssue(existingFile, PATH);
-        fileL.setCountFile(existingFile);
-        fileL.countIssue(PATH, existingFile);
+        FileIssue.setCountFile(existingFile);
+        FileIssue.countIssue(PATH, existingFile);
 
         int expectedIssue = 3;
-        int actualIssue = fileL.getCountIssue();
+        int actualIssue = FileIssue.getCountIssue();
 
         Assert.assertEquals(expectedIssue, actualIssue);
     }
