@@ -4,10 +4,8 @@
 //Task: #Assignment1
 //Matrik: #240403
 //Name: #Tee Li Hong
-
 package com.tlh.rt_assignment1;
 
-import static com.tlh.rt_assignment1.countfni.CountMain.PATH;
 import com.tlh.rt_assignment1.countfni.Path;
 import static com.tlh.rt_assignment1.countfni.Path.folderName;
 import java.io.File;
@@ -16,15 +14,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestPath {
-    
-   @Test
-   public void testSetPath(){
-        Path pathN = new Path(PATH);
-        pathN.setPath(folderName);
-        
+
+    @Test
+    public void testSetPath() {
+        Path.setPath(folderName);
+
         String expectedPath = Paths.get("").toAbsolutePath().toString() + File.separator + folderName;
-  
-        Assert.assertEquals(expectedPath,pathN.getPath());
-   }
-   
+
+        Assert.assertEquals(expectedPath, Path.getPath());
+    }
+
 }
