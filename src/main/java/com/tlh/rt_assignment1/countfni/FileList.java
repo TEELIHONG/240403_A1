@@ -4,7 +4,6 @@
 //Task: #Assignment1
 //Matrik: #240403
 //Name: #Tee Li Hong
-
 package com.tlh.rt_assignment1.countfni;
 
 import java.util.ArrayList;
@@ -14,7 +13,6 @@ public class FileList implements Runnable {
 
     private static final ArrayList<String> list = new ArrayList();
     private static File dir;
-    private static int count = 0;
 
     public FileList(final File fileList) {
         dir = fileList;
